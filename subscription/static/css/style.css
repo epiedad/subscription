@@ -1,0 +1,13 @@
+.center-div-login{
+    margin: 0 auto;
+    width:20% /* value of your choice which suits your alignment */
+}
+
+.center-div{
+    margin: 0 auto;
+    width:50% /* value of your choice which suits your alignment */
+}
+
+#success-alert, #warning-alert {
+    display: none;
+}

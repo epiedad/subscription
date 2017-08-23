@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+    <div class="container-fluid center-div-login">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="login-form">
+                    <h3>Subscriber login</h3>
+                    <form action="{% url 'subscription:login' %}" method="post">
+                        <div class="form-group">
+                            {% csrf_token %}
+                            {{ form|as_bootstrap }}
+                            <input type="hidden" name="next" value="{{ next }}" />
+                            <p><input type="submit" class="btn btn-primary" value="Log-in"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
